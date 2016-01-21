@@ -1,0 +1,20 @@
+<head>
+  <title>Todo List</title>
+</head>
+
+<body>
+  {{> loginButtons}}
+  <div class="container">
+    {{#if currentUser}}
+      <ul>
+        {{#each moods}}
+          {{> mood}}
+        {{/each}}
+      </ul>
+    {{/if}}
+  </div>
+</body>
+
+<template name="mood">
+  <li><img src="{{image}}" style="display:{{displayStyle}}" class="mood" height="100" width="100"/></li>
+</template>
